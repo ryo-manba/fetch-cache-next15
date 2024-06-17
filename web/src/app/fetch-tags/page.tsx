@@ -1,4 +1,3 @@
-// https://nextjs.org/docs/app/api-reference/functions/unstable_cache
 import { revalidateTag } from "next/cache";
 import Link from "next/link";
 
@@ -22,7 +21,6 @@ export default async function FetchPage() {
   async function action() {
     "use server";
     console.log("revalidateTag called");
-    // https://nextjs.org/docs/app/building-your-application/caching#fetch-optionsnexttags-and-revalidatetag
     revalidateTag("fetch-tag");
   }
 

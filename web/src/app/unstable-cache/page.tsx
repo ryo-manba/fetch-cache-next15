@@ -1,4 +1,3 @@
-// https://nextjs.org/docs/app/api-reference/functions/unstable_cache
 import { unstable_cache as cache } from "next/cache";
 import { revalidateTag } from "next/cache";
 import Link from "next/link";
@@ -10,6 +9,7 @@ async function getHello() {
   return await res.json();
 }
 
+// https://nextjs.org/docs/app/api-reference/functions/unstable_cache
 const getCachedHello = cache(getHello, ["hello-tag"], { tags: ["hello-tag"] });
 
 async function Hello() {
@@ -22,7 +22,6 @@ export default async function FetchPage() {
   async function action() {
     "use server";
     console.log("revalidateTag called");
-    // https://nextjs.org/docs/app/building-your-application/caching#fetch-optionsnexttags-and-revalidatetag
     revalidateTag("hello-tag");
   }
 

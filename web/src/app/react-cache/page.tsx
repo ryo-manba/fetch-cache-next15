@@ -1,11 +1,11 @@
 import { unstable_noStore as noStore } from "next/cache";
 
-// https://react.dev/reference/react/cache
 import { cache } from "react";
 import Link from "next/link";
 
 const url = "http://localhost:8080/hello";
 
+// https://react.dev/reference/react/cache
 const getHello = cache(async () => {
   noStore();
 

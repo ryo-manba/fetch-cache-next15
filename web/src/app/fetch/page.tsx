@@ -5,6 +5,7 @@ const url = "http://localhost:8080/hello";
 async function getHello() {
   noStore();
 
+  // https://nextjs.org/docs/app/building-your-application/caching#request-memoization
   const res = await fetch(url);
   return await res.json();
 }

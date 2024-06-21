@@ -17,7 +17,7 @@ async function Hello() {
   return <div>{JSON.stringify(res)}</div>;
 }
 
-export default async function FetchPage() {
+export default async function Page() {
   async function action() {
     "use server";
     console.log("revalidateTag called");

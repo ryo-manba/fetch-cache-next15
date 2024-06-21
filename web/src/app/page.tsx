@@ -14,6 +14,9 @@ export default function Home() {
       <Link className="text-xl" href="/fetch-tags">
         Fetch With Tags
       </Link>
+      <Link className="text-xl" href="/fetch-opt-out">
+        Fetch Opt-out
+      </Link>
     </div>
   );
 }
